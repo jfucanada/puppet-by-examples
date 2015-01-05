@@ -6,5 +6,5 @@ exec { 'get-php-cs-fixer':
 
 exec { 'chmod-php-cs-fixer':
     path    => '/bin',
-    command => 'chmod a+x /usr/local/bin/php-cs-fixer',
+    command => 'chmod +x /usr/local/bin/php-cs-fixer',
 }
