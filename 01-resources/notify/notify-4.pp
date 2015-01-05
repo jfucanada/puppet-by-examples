@@ -1,10 +1,5 @@
+$val1 = 'abc'
+notify { "Printing variables: val1 = ${val1}": }
 
-$some_value = 'abc'
-
-notify { "Printing variables: some_value = ${some_value}":
-}
-
-$some_other_value = 345
-
-notify { "Printing variables: some_other_value = ${some_other_value}":
-}
+$val2 = 345
+notify { "Printing variables: val2 = ${val2}": }

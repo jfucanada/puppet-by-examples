@@ -1,3 +1,3 @@
 notify { 'Arbitrary title':
-    message => 'Some text...'
+    message => 'Some text...',
 }

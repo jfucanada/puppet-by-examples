@@ -1,2 +1,1 @@
-notify { 'The title acts as a default message...':
-}
+notify { 'The title acts as a default message...': }
