@@ -36,6 +36,10 @@ Check the packages for git:
 
     apt-cache policy git
 
+Install PHP:
+
+    sudo apt-get install php5 -y
+
 ## Using well-known puppet modules
 
 ### Using willdurand/composer

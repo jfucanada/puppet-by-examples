@@ -31,6 +31,10 @@ http://serverfault.com/questions/514401/how-to-install-apache-benchmark-on-cento
     sudo yum install lynx
     sudo yum install httpd-tools
 
+Install PHP:
+
+    sudo yum install php -y
+
 ## Update the system
 
 https://www.centos.org/docs/5/html/yum/sn-updating-your-system.html
