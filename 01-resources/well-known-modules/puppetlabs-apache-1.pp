@@ -20,10 +20,10 @@ file { '/vagrant/tmp/by-examples/index.html':
 }
 
 apache::vhost { 'by-examples.lh':
-  port          => '80',
-  docroot       => '/vagrant/tmp/by-examples',
-  docroot_owner => 'vagrant',
-  docroot_group => 'vagrant',
+    port          => '80',
+    docroot       => '/vagrant/tmp/by-examples',
+    docroot_owner => 'vagrant',
+    docroot_group => 'vagrant',
 }
 
 file_line { 'Append by-examples.lh to /etc/hosts':
