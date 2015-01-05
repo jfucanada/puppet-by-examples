@@ -12,7 +12,7 @@ Boxes:
 
     sudo apt-get update -y
 
-## Update puppet in Ubuntu 12.04
+## Update Puppet in Ubuntu 12.04
 
 The commands to run:
 

@@ -1,7 +1,10 @@
 # Ubuntu
 #   sudo puppet module install puppetlabs-apache --version 1.2.0
-#   sudo puppet apply puppetlabs-apache.pp
+#   sudo puppet apply puppetlabs-apache-2.pp
 #   sudo apt-get install lynx-cur -y
+#   lynx lorem.lh
+#   lynx ipsum.lh
+#   lynx dolor.lh
 
 
 class {
