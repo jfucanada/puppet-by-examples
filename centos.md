@@ -26,3 +26,18 @@ http://serverfault.com/questions/514401/how-to-install-apache-benchmark-on-cento
 
     sudo yum install lynx
     sudo yum install httpd-tools
+
+## Update the system
+
+https://www.centos.org/docs/5/html/yum/sn-updating-your-system.html
+
+    sudo yum update -y
+
+##Using willdurand/composer
+
+https://forge.puppetlabs.com/willdurand/composer/scores
+
+    sudo yum install php -y
+    sudo puppet module install willdurand-composer
+    sudo puppet apply willdurand-composer.pp
+
