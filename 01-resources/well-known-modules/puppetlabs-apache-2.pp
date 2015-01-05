@@ -40,5 +40,5 @@ define create_vhosts {
     }
 }
 
-create_vhosts { $hosts: ;}
+create_vhosts { $hosts: }
 

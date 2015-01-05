@@ -14,7 +14,6 @@ file_line { 'Append a line to /tmp/first.txt':
     require => File['/tmp/first.txt']
 }
 
-
 file_line { 'Append a line to /tmp/first.txt if it does not exist':
     path    => '/tmp/first.txt',
     line    => "\nthis is a line\n",

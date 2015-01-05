@@ -13,7 +13,7 @@ class {
 $base_dir = '/vagrant/tmp'
 
 file { [
-        "${base_dir}",
+        $base_dir,
         "${base_dir}/by-examples",
     ]:
     ensure => directory,
