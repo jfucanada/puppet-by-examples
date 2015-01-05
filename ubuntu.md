@@ -12,6 +12,16 @@ Boxes:
 
     sudo apt-get update -y
 
+## Update puppet in Ubuntu 12.04
+
+The commands to run:
+
+    sudo wget https://apt.puppetlabs.com/puppetlabs-release-precise.deb
+    sudo dpkg -i puppetlabs-release-precise.deb
+    sudo apt-get update -y
+    sudo apt-get install puppet -y
+    puppet --version
+
 ## Install packages
 
 Install lynx:
