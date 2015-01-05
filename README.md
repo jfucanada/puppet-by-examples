@@ -13,6 +13,7 @@ Puppet by examples
 * http://docs.puppetlabs.com/learning/ral.html
 * http://docs.puppetlabs.com/learning/manifests.html
 * https://docs.puppetlabs.com/pe/latest/quick_writing_nix.html
+* https://docs.puppetlabs.com/guides/style_guide.html
 
 ## Lint
 
@@ -46,3 +47,7 @@ List resources:
 * https://vagrantcloud.com/chef
 * https://vagrantcloud.com/centos
 * https://vagrantcloud.com/ubuntu
+
+##Style
+
+All classes and defined resources in separate files.
