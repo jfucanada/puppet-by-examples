@@ -1,6 +1,13 @@
 Ubuntu
 ======
 
+Boxes:
+
+* https://vagrantcloud.com/ubuntu
+* https://vagrantcloud.com/ubuntu/boxes/trusty32
+
+    ubuntu/trusty32
+
 Install lynx:
 
     sudo apt-get install lynx-cur

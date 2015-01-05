@@ -43,4 +43,3 @@ List resources:
 * https://vagrantcloud.com/chef
 * https://vagrantcloud.com/centos
 * https://vagrantcloud.com/ubuntu
-

@@ -1,6 +1,13 @@
 CentOS
 ======
 
+Boxes:
+
+* https://vagrantcloud.com/puppetlabs
+* https://vagrantcloud.com/puppetlabs/boxes/centos-7.0-64-puppet
+
+    puppetlabs/centos-7.0-64-puppet
+
 How to check release?
 
 http://forum.directadmin.com/showthread.php?t=15878
