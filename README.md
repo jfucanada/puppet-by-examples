@@ -3,13 +3,16 @@ Puppet by examples
 
 ## Puppet Documentation - References
 
-https://docs.puppetlabs.com/references/latest/type.html
+* https://docs.puppetlabs.com/references/latest/type.html
+* https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html
+* https://docs.puppetlabs.com/puppet/latest/reference/modules_installing.html
+* https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html
 
 ## Puppet Documentation - Learning
 
-http://docs.puppetlabs.com/learning/ral.html
-
-http://docs.puppetlabs.com/learning/manifests.html
+* http://docs.puppetlabs.com/learning/ral.html
+* http://docs.puppetlabs.com/learning/manifests.html
+* https://docs.puppetlabs.com/pe/latest/quick_writing_nix.html
 
 ## Lint
 
@@ -43,4 +46,3 @@ List resources:
 * https://vagrantcloud.com/chef
 * https://vagrantcloud.com/centos
 * https://vagrantcloud.com/ubuntu
-chef/freebsd-10.0

@@ -40,4 +40,6 @@ https://forge.puppetlabs.com/willdurand/composer/scores
     sudo yum install php -y
     sudo puppet module install willdurand-composer
     sudo puppet apply willdurand-composer.pp
+    composer --version
+
 
