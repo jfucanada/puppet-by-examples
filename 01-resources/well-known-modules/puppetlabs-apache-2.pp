@@ -27,10 +27,10 @@ define create_vhosts {
     }
 
     apache::vhost { "${name}.lh":
-      port          => '80',
-      docroot       => "/vagrant/tmp/${name}",
-      docroot_owner => 'vagrant',
-      docroot_group => 'vagrant',
+        port          => '80',
+        docroot       => "/vagrant/tmp/${name}",
+        docroot_owner => 'vagrant',
+        docroot_group => 'vagrant',
     }
 
     file_line { "Append ${name}.lh to /etc/hosts":
