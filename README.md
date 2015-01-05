@@ -51,3 +51,5 @@ List resources:
 ##Style
 
 All classes and defined resources in separate files.
+
+To avoid lint comments classes and defined resources need DOC.
