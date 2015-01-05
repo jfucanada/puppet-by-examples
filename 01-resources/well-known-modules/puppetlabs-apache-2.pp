@@ -9,7 +9,7 @@ class {
 }
 
 
-$hosts = ['lorem', 'ipsum', 'dolor', 'sit']
+$hosts = ['lorem', 'ipsum', 'dolor', 'sit', 'foo', 'bar']
 
 file { '/vagrant/tmp':
     ensure => directory,
@@ -17,14 +17,13 @@ file { '/vagrant/tmp':
 
 define create_vhosts {
 
-    notify { "Iteration ${name}": }
-
     file { "/vagrant/tmp/${name}":
         ensure => directory,
     }
 
     file { "/vagrant/tmp/${name}/index.html":
         content => "<h1>Hello, ${name}!</h1>",
+        require => File["/vagrant/tmp/${name}"],
     }
 
     apache::vhost { "${name}.lh":
