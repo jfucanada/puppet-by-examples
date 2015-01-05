@@ -3,8 +3,8 @@
 file { 'Second file':
     ensure  => present,
     path    => '/tmp/second.txt',
-    mode    => '0640',
+    mode    => '0612',
     content => 'The second file...',
-    owner   => 'www-data',
-    group   => 'www-data',
+    owner   => 'root',
+    group   => 'root',
 }

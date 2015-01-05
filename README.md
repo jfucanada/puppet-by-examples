@@ -36,3 +36,11 @@ List resources:
     puppet resource user root
     puppet resource file /etc
 
+##Boxes
+
+* https://vagrantcloud.com/hashicorp
+* https://vagrantcloud.com/puppetlabs
+* https://vagrantcloud.com/chef
+* https://vagrantcloud.com/centos
+* https://vagrantcloud.com/ubuntu
+
