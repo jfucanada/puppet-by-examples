@@ -40,11 +40,3 @@ Install PHP:
 
     sudo apt-get install php5 -y
 
-## Using well-known puppet modules
-
-### Using willdurand/composer
-
-    sudo apt-get install php5 -y
-    sudo puppet module install willdurand-composer
-    sudo puppet apply willdurand-composer.pp
-    composer --version
