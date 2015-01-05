@@ -1,6 +1,6 @@
 # Ubuntu
 #   sudo puppet module install gini-archive
-#   sudo puppet apply archive.pp
+#   sudo puppet apply archive-1.pp
 
 
 class { 'archive::prerequisites': }
