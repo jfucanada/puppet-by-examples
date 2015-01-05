@@ -1,5 +1,5 @@
 # Ubuntu
-#   sudo puppet module install puppetlabs-apache
+#   sudo puppet module install puppetlabs-apache --version 1.2.0
 #   sudo puppet apply puppetlabs-apache.pp
 #   sudo apt-get install lynx-cur -y
 
@@ -36,5 +36,15 @@ apache::vhost { 'host2.lh':
   docroot       => '/vagrant/tmp/host2',
   docroot_owner => 'vagrant',
   docroot_group => 'vagrant',
+}
+
+file_line { 'Append host1.lh to /etc/hosts':
+    path    => '/etc/hosts',
+    line    => "\n127.0.0.1 host1.lh\n",
+}
+
+file_line { 'Append host2.lh to /etc/hosts':
+    path    => '/etc/hosts',
+    line    => "\n127.0.0.1 host2.lh\n",
 }
 
