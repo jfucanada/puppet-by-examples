@@ -47,4 +47,3 @@ file_line { 'Append host2.lh to /etc/hosts':
     path    => '/etc/hosts',
     line    => "\n127.0.0.1 host2.lh\n",
 }
-
