@@ -1,5 +1,3 @@
-# sudo puppet apply file-2.pp
-
 file { 'Second file':
     ensure  => present,
     path    => '/tmp/second.txt',
