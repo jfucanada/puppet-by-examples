@@ -3,3 +3,5 @@ define some_defined_resource {
 }
 
 some_defined_resource { 'foo bar': }
+some_defined_resource { 'another': }
+some_defined_resource { 'yet another': }
