@@ -8,6 +8,8 @@ Boxes:
 
     puppetlabs/centos-7.0-64-puppet
 
+## Basics
+
 How to check release?
 
 http://forum.directadmin.com/showthread.php?t=15878
@@ -19,6 +21,8 @@ How to check the package name for a binary?
 http://serverfault.com/questions/514401/how-to-install-apache-benchmark-on-centos
 
     yum provides /usr/bin/ab
+
+## Install the software
 
 How to install lynx and ab:
 
@@ -33,7 +37,9 @@ https://www.centos.org/docs/5/html/yum/sn-updating-your-system.html
 
     sudo yum update -y
 
-##Using willdurand/composer
+## Using well-known puppet modules
+
+### willdurand/composer
 
 https://forge.puppetlabs.com/willdurand/composer/scores
 

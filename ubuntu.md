@@ -36,7 +36,9 @@ Check the packages for git:
 
     apt-cache policy git
 
-##Using willdurand/composer
+## Using well-known puppet modules
+
+### Using willdurand/composer
 
     sudo apt-get install php5 -y
     sudo puppet module install willdurand-composer
