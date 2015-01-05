@@ -43,3 +43,4 @@ List resources:
 * https://vagrantcloud.com/chef
 * https://vagrantcloud.com/centos
 * https://vagrantcloud.com/ubuntu
+chef/freebsd-10.0
