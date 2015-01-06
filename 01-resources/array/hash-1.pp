@@ -5,5 +5,6 @@ $admin = {
 
 $first_name = $admin['name']
 
-file { 'A file':
-    'path' => '$admin[
+notify { "His name is ${first_name}": }
+notify { "COMPLETE HASH = ${admin} ": }
+notify { "SURNAME = ${admin['surname']} ": }

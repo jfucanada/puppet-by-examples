@@ -3,6 +3,8 @@ $admin = {
     'surname' => 'Doe',
 }
 
-$first_name = $admin['name']
 
-notify { "His name is ${first_name}": }
+file { 'A file':
+    path    => "/tmp/${admin['name']}.txt",
+    content => "Hi, I'm ${admin['surname']}!",
+}
