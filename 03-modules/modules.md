@@ -4,6 +4,7 @@ Modules
 ## Generate module
 
     puppet module generate gajdaw-first
+    puppet module generate gajdaw-box
 
 ## Build module
 
