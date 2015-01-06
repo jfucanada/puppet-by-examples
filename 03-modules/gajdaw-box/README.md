@@ -96,7 +96,7 @@ Now, the `box` app should be available in your system:
 
 ## Reference
 
-The complete list of parameters is available in `params.pp` file.
+The complete list of parameters is available in [`params.pp`](manifests/params.pp) file.
 
 ## Limitations
 
