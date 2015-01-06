@@ -189,6 +189,7 @@ When I work on this module I find the following commands indispensable:
 
     sudo puppet module list
     puppet module build .
+    puppet-lint manifests --no-autoloader_layout-check
     sudo puppet module install pkg/gajdaw-binary-0.1.0.tar.gz
     sudo puppet module uninstall gajdaw-binary
 
