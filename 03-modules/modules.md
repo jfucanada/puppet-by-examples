@@ -8,3 +8,8 @@ Modules
 ## Build module
 
     puppet module build
+
+## Coding Standards
+
+    puppet-ling gajdaw-first
+    puppet-lint --no-autoloader_layout-check gajdaw-first/
