@@ -1,41 +1,94 @@
 # == Class: box
 #
-# Full description of class box here.
+# The class to download box application (http://box-project.org).
 #
 # === Parameters
 #
-# Document parameters here.
+# [*version*]
+#   Version of the application to download and install.
+#   Defaults to: "2.5.0"
 #
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# [*phar_location*]
+#   URL where box executable can be found.
+#   Defaults to: "https://github.com/box-project/box2/releases/download/${version}/box-${version}.phar"
 #
-# === Variables
+# [*target_dir*]
+#   Where to install the box executable.
+#   Defaults to: "/usr/local/bin"
 #
-# Here you should define a list of variables that this module would require.
+# [*command_name*]
+#   The name of the box executable.
+#   Defaults to: "box"
 #
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
+# [*user*]
+#   The owner of the box executable.
+#   Defaults to: "root"
 #
-# === Examples
+# == Example:
 #
-#  class { 'box':
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
+# Installing box with default settings:
+#
+#   include box
+#
+#
+# Installing box in different directory:
+#
+#   class { 'box':
+#     'target_dir'   => '/bin',
+#     'command_name' => 'box-app',
+#   }
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Włodzimierz Gajda <gajdaw@gajdaw.pl>
 #
 # === Copyright
 #
-# Copyright 2015 Your name here, unless otherwise noted.
+# Copyright 2015 Włodzimierz Gajda
 #
-class box {
+class box (
+  $version      = undef,
+  $target_dir   = undef,
+  $command_name = undef,
+  $user         = undef
+) {
 
+  include box::params
+
+  $box_version = $version ? {
+    undef => $::box::params::version,
+    default => $version
+  }
+
+  $box_target_dir = $target_dir ? {
+    undef => $::box::params::target_dir,
+    default => $target_dir
+  }
+
+  $box_command_name = $command_name ? {
+    'UNDEF' => $::box::params::command_name,
+    default => $command_name
+  }
+
+  $box_user = $user ? {
+    'UNDEF' => $::box::params::user,
+    default => $user
+  }
+
+  wget::fetch { 'box-wget':
+    source      => $::box::params::phar_location,
+    destination => "${box_target_dir}/${box_command_name}",
+    execuser    => $box_user,
+    onlyif      => "test ! -f ${box_target_dir}/${box_command_name}",
+  }
+
+  exec { 'box-fix-permissions':
+    command => "chmod a+x ${box_command_name}",
+    path    => '/usr/bin:/bin:/usr/sbin:/sbin',
+    cwd     => $box_target_dir,
+    user    => $box_user,
+    unless  => "test -x ${box_target_dir}/${box_command_name}",
+    require => Wget::Fetch['box-wget'],
+  }
 
 }
