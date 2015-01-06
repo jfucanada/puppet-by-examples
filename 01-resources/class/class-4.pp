@@ -1,3 +1,6 @@
+# Class with one parameter.
+# Passing a parameter to a class.
+
 class example4 (
     $msg = 'Lorem ipsum...'
 ) {

@@ -1,3 +1,6 @@
+# Class without parameters
+# Using a class with 'include'
+
 class example1 {
     notify { 'Class Example 01': }
 }

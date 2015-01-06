@@ -1,3 +1,6 @@
+# Class with one parameter.
+# Parameter is optional because it has a default value.
+
 class example3 (
     $msg = 'Lorem ipsum...'
 ) {
@@ -5,4 +8,3 @@ class example3 (
 }
 
 class { 'example3': }
-

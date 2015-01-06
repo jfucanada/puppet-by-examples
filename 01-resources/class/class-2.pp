@@ -1,3 +1,6 @@
+# Class without parameters
+# Using a class with 'class'
+
 class example2 {
     notify { 'Class Example 02': }
 }
