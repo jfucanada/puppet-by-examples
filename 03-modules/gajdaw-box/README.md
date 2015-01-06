@@ -1,4 +1,4 @@
-# box module
+# Box Puppet Module
 
 #### Table of Contents
 
