@@ -1,4 +1,4 @@
-# box
+# box module
 
 #### Table of Contents
 
@@ -16,7 +16,8 @@
 ## Overview
 
 The module installs box application that easies the generation of PHP PHAR archives.
-More information about box is available at: http://box-project.org.
+More information about the box app itself is available at:
+http://box-project.org.
 
 ## Module Description
 
