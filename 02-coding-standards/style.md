@@ -1,6 +1,8 @@
 Puppet Coding Standards
 =======================
 
+https://docs.puppetlabs.com/guides/style_guide.html
+
 ## Puppet-Lint
 
 Use lint to check standards
@@ -19,11 +21,15 @@ Then you can analyse the examples running:
 
 ## The Style
 
+### Files
+
 Saparate files for:
 
 * classes
 * defined resources
 
+
+### DOC
 
 DOC necessary for:
 
@@ -31,3 +37,14 @@ DOC necessary for:
 * defined resources
 
 (otherwise you will get puppet-lint warnings).
+
+### Global variables (like facts)
+
+Use:
+
+    $::osfamily
+
+Don't use:
+
+    $osfamily
+
