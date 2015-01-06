@@ -1,7 +1,13 @@
 if $::operatingsystem == 'Ubuntu' {
+
     notify { 'We are on Ubuntu...': }
+
 } elseif $::operatingsystem == 'Redhat' {
+
     notify { 'We are on Redhat...': }
-} elseif {
+
+} else {
+
     notify { 'System not supported!': }
+
 }
