@@ -29,5 +29,11 @@
         "14.04"
       ]
     }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
   ]
 }

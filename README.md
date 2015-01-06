@@ -15,6 +15,11 @@ Puppet by examples
 * https://docs.puppetlabs.com/pe/latest/quick_writing_nix.html
 * https://docs.puppetlabs.com/guides/style_guide.html
 
+
+## Testing
+
+http://docs.puppetlabs.com/guides/tests_smoke.html
+
 ## Commands
 
 Applying manifests that don't require root's privileges:
