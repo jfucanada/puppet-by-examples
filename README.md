@@ -15,10 +15,6 @@ Puppet by examples
 * https://docs.puppetlabs.com/pe/latest/quick_writing_nix.html
 * https://docs.puppetlabs.com/guides/style_guide.html
 
-## Lint
-
-http://puppet-lint.com/
-
 ## Commands
 
 Applying manifests that don't require root's privileges:
@@ -48,8 +44,3 @@ List resources:
 * https://vagrantcloud.com/centos
 * https://vagrantcloud.com/ubuntu
 
-##Style
-
-All classes and defined resources in separate files.
-
-To avoid lint comments classes and defined resources need DOC.
