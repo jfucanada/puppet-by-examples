@@ -120,7 +120,8 @@ The box was tested on:
 ### Release 0.1.0
 
 * a class without parameters
-* downloaded version: box 2.4.4
+* fixed version to be downloaded: box 2.4.4
 * fixed destination folder and filename: `/usr/local/bin/box`
 * fixed src URL: `https://github.com/kherge-archive/Box/releases/download/2.4.4/box-2.4.4.phar`
 * used `wget` binary
+* tested in Ubuntu 12.04 (only)
