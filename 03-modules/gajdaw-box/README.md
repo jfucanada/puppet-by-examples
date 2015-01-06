@@ -5,9 +5,9 @@
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
 3. [Setup - The basics of getting started with box](#setup)
-    * [What box affects](#what-box-affects)
+    * [What box module affects](#what-box-module-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with box](#beginning-with-box)
+    * [Beginning with box module](#beginning-with-box-module)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -15,65 +15,111 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+The module installs box application that easies the generation of PHP PHAR archives.
+More information about box is available at: http://box-project.org.
 
 ## Module Description
 
-If applicable, this section should have a brief description of the technology
-the module integrates with and what that integration enables. This section
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?"
+Currently, there is no binary package for box app available.
+Thus, you cannot install box using package managers, like, for example:
 
-If your module has a range of functionality (installation, configuration,
-management, etc.) this is the time to mention it.
+    $ sudo apt-get install box
+
+Once the binary packages are available, this module will be useless.
 
 ## Setup
 
-### What box affects
+### What box module affects
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+* Module copies box PHAR binary to your system (one file)
+* The file can be placed in arbitrary directory
+* The file can be given arbitrary name
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements
 
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
+The module uses `wget` binary to download box.
 
-### Beginning with box
+If you want to run box application you will also need php cli.
 
-The very basic steps needed for a user to get the module up and running.
+But php is not required to use this module.
 
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+### Beginning with box module
+
+#### System wide install with Puppet
+
+To install the module in your system run:
+
+    sudo puppet module install gajdaw-box
+
+You may lock the version to avoid using the latest version:
+
+    sudo puppet module install gajdaw-box --version 0.1.0
+
+#### System wide install with Git
+
+You may also use git to install the module:
+
+    mkdir -p /etc/puppet/modules/box
+    cd /etc/puppet/modules/box
+    git clone --depth 1 https://github.com/pro-vagrant/puppet-box.git .
+
+You may lock the version to avoid using the latest version:
+
+    git clone --depth 1 --branch v0.1.0 https://github.com/pro-vagrant/puppet-box.git .
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+To use `box` app:
+
+* create `use-gajdaw-box.pp` file
+* run the command to apply box
+* install php cli
+
+The simples `use-gajdaw-box.pp` file is:
+
+    # Filename: use-gajdaw-box.pp
+    #
+    include box
+
+Then apply the configuration with:
+
+    sudo puppet apply use-gajdaw-box.pp
+
+To test box you need to install php:
+
+    sudo apt-get install php5 -y
+
+Now, the `box` app should be available in your system:
+
+    box --version
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
+The complete list of parameters is available in `params.pp` file.
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+The box was tested on:
 
-## Development
+* Ubuntu 14.04 / Puppet 3.7
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+## Release Notes
 
-## Release Notes/Contributors/Etc **Optional**
+### Release 0.2.0
 
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You may also add any additional sections you feel are
-necessary or important to include here. Please use the `## ` header.
+* class parameters (all with reasonable defaults):
+  -  $version
+  -  $phar_location
+  -  $target_dir
+  -  $command_name
+  -  $user
+* used `maestrodev/wget` to download the file (not wget binary)
+* improved documentation
+
+### Release 0.1.0
+
+* a class without parameters
+* downloaded version: box 2.4.4
+* fixed destination folder and filename: /usr/local/bin/box
+* fixed src URL: https://github.com/kherge-archive/Box/releases/download/2.4.4/box-2.4.4.phar
+* used `wget` binary
