@@ -1,0 +1,3 @@
+[submodule "03-modules/gajdaw-box"]
+	path = 03-modules/gajdaw-box
+	url = git@github.com:pro-vagrant/puppet-box.git
