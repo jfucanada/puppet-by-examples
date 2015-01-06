@@ -12,6 +12,9 @@ class example5 (
     $msg = 'Lorem ipsum...'
 ) {
     # You cannot use the msg like this
+    # All the elements will be concatenated
+    # like in array-2.pp example
+    #
     #notify { "This is ${msg}...": }
 
     notify { $msg: }
