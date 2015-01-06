@@ -8,7 +8,7 @@
 #    define-iterate-array.pp
 
 
-class example5 (
+class iteration (
     $msg = 'Lorem ipsum...'
 ) {
     # You cannot use the msg like this
@@ -20,7 +20,7 @@ class example5 (
     notify { $msg: }
 }
 
-class { 'example5':
+class { 'iteration':
     msg => ['one', 'two', 'three'],
 }
 
