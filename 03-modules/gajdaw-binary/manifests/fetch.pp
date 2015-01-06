@@ -1,3 +1,56 @@
+# == Define: binary
+#
+# The class to download and install one-file-applications
+# like composer.phar, phpunit.phar, etc.
+#
+# === Parameters
+#
+# [*source*]
+#   URL of the binary.
+#   Required: no default value
+#
+# [*target_dir*]
+#   Where to install the box executable.
+#   Defaults to: '/usr/local/bin'
+#
+# [*user*]
+#   The owner of the box executable.
+#   Defaults to: 'root'
+#
+# [*rights*]
+#   The rights for the newly created file.
+#   Defaults to: 'a+x'
+#
+# [*command_name*]
+#   The name of the box executable.
+#   Defaults to: the name of the resource
+#
+#
+# == Example:
+#
+# Installing phpunit with default settings:
+#
+#     binary::fetch { 'phpunit':
+#         source => 'https://phar.phpunit.de/phpunit.phar',
+#     }
+#
+#
+# Installing composer in a different directory:
+#
+#     binary::fetch { 'composer':
+#         source     => 'https://getcomposer.org/composer.phar',
+#         target_dir => '/tmp',
+#     }
+#
+# === Authors
+#
+# Włodzimierz Gajda <gajdaw@gajdaw.pl>
+#
+# === Copyright
+#
+# Copyright 2015 Włodzimierz Gajda
+#
+
 define binary::fetch (
   $source,
   $target_dir   = undef,
@@ -41,7 +94,5 @@ define binary::fetch (
     user    => $binary_user,
     require => Wget::Fetch["wget::fetch ${name}"],
   }
-
-
 
 }
