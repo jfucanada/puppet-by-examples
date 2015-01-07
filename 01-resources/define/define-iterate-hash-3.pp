@@ -1,4 +1,4 @@
-# validate the type of parameter passed to loop
+# validate the type of parameter passed to a defined resource
 
 include stdlib
 
