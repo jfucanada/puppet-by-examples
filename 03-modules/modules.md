@@ -3,8 +3,10 @@ Modules
 
 ## Generate module
 
+    # the command creates a directory gajdaw-first
     puppet module generate gajdaw-first
-    puppet module generate gajdaw-box
+    mv gajdaw-first puppet-first
+
 
 ## Build module
 
