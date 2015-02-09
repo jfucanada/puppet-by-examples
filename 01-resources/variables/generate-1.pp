@@ -1,6 +1,13 @@
+$date = generate('/bin/date')
+notify { "Printing variables: ${date}": }
 
-$tmp_pwd = generate('/bin/bash', '-c', 'eval echo "~vagrant"')
-$final_pwd = inline_template('<%= @tmp_pwd.strip %>')
+$who = generate('/usr/bin/whoami')
+notify { "Printing variables: ${who}": }
 
-notify { "PWD for root: ${final_pwd}": }
+$pwd = generate('/bin/pwd')
+notify { "Printing variables: ${pwd}": }
+
+$tmp_date = generate('/bin/date')
+$final_date = inline_template('<%= @tmp_date.upcase.strip %>')
+notify { "SUPER DATE: ${final_date}": }
 
