@@ -55,3 +55,9 @@ List resources:
     sudo dpkg -i puppetlabs-release-precise.deb
     sudo apt-get update -y
     sudo apt-get install puppet -y
+
+
+## Debugging
+
+puppet --debug --verbose test.pp
+puppet --parseonly test.pp
