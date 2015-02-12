@@ -61,3 +61,10 @@ List resources:
 
 puppet --debug --verbose test.pp
 puppet --parseonly test.pp
+
+
+## Functions
+
+https://docs.puppetlabs.com/references/latest/function.html
+https://forge.puppetlabs.com/puppetlabs/stdlib
+
