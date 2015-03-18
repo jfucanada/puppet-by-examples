@@ -1,0 +1,2 @@
+http://docs.puppetlabs.com/guides/augeas.html
+https://doauto.wordpress.com/2013/06/22/how-to-change-a-file-using-puppet/
