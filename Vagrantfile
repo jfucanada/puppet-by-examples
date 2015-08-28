@@ -2,6 +2,9 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
+  config.vm.box = "ubuntu1404-i386-puppetlatest-1.0.16"
+
+
 # OS Families:
 #
 #    Debian family:    Debian, Ubuntu
@@ -21,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #  config.vm.box = "ubuntu/precise32"
 #  config.vm.box = "ubuntu/precise64"
-  config.vm.box = "ubuntu/trusty32"
+#  config.vm.box = "ubuntu/trusty32"
 #  config.vm.box = "ubuntu/trusty64"
 
 #  config.vm.box = "puppetlabs/centos-6.5-64-puppet"
@@ -38,14 +41,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #  config.vm.network "private_network", ip: "33.33.33.33"
 
-  if Vagrant.has_plugin?("vagrant-cachier")
-
-    config.cache.scope = :box
-
-    config.cache.enable :generic, {
-      "wget" => { cache_dir: "/var/cache/wget" },
-    }
-
-  end
+#  if Vagrant.has_plugin?("vagrant-cachier")
+#    config.cache.scope = :box
+#    config.cache.enable :generic, {
+#      "wget" => { cache_dir: "/var/cache/wget" },
+#    }
+#  end
 
 end
