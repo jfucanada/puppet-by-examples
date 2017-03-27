@@ -1,0 +1,6 @@
+# Disbale puppet pull
+puppet agent --disable
+# Enable puppet pull
+puppet agent --enable
+# Dry run of puppet pull
+puppet agent -t --noop
